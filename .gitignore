@@ -1,0 +1,38 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]ogs/
+logs/
+*.log
+
+# Visual Studio / IDEs
+.vs/
+.vscode/
+.idea/
+.claude/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Node
+node_modules/
+
+# Configuración y secretos (excepto el .example)
+appsettings.json
+appsettings.*.json
+!appsettings.example.json
+**/appsettings.json
+**/appsettings.*.json
+!**/appsettings.example.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*credentials*.json
+*secret*.json
+
+# Archivos de análisis locales
+*.geojson

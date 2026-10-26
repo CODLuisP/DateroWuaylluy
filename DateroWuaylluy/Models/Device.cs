@@ -1,0 +1,14 @@
+﻿namespace DateroWuaylluy.Models;
+
+public class Device
+{
+    public string DeviceId { get; set; }
+    public double lastValidLatitude { get; set; }
+    public double lastValidLongitude { get; set; }
+    public double lastValidHeading { get; set; }
+    public double lastValidSpeed { get; set; }
+    public string Descripcion { get; set; }
+    public string Direccion { get; set; }
+    public string Codgeoact { get; set; }
+    public string Rutaact { get; set; }
+}
