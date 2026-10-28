@@ -196,6 +196,10 @@ public class Program
             _username,
             _cuentas.Keys);
         await RecuperarMonitoreosActivosAsync();
+        // Los despachos recuperados son de hoy (GetDevicesActivosAsync filtra fechaini >= hoy):
+        // se marca el día como ya iniciado para que GestionarMonitoreoEsperaAsync no los suelte
+        // en su primera vuelta creyendo que cambió el día.
+        _diaIniciado = DateOnly.FromDateTime(DateTime.Now);
         _ = Task.Run(GestionarMonitoreoEsperaAsync);
         _ = Task.Run(VigilarMonitoreosActivosAsync);
 

@@ -89,11 +89,11 @@ public class DatabaseService
             {
                 lista.Add(new DeviceActivo
                 {
-                    Placa           = reader.IsDBNull(0) ? null : reader.GetString(0).Trim(),
-                    Rutaact         = reader.IsDBNull(1) ? null : reader.GetString(1).Trim(),
-                    CodConductorAct = reader.IsDBNull(2) ? "0" : reader.GetString(2).Trim(),
-                    Codasig         = reader.IsDBNull(3) ? "0" : reader.GetString(3).Trim(),
-                    FechaIniUnix    = reader.IsDBNull(4) ? null : reader.GetString(4).Trim(),
+                    Placa           = reader.IsDBNull(0) ? null : (Convert.ToString(reader.GetValue(0)) ?? "").Trim(),
+                    Rutaact         = reader.IsDBNull(1) ? null : (Convert.ToString(reader.GetValue(1)) ?? "").Trim(),
+                    CodConductorAct = reader.IsDBNull(2) ? "0" : (Convert.ToString(reader.GetValue(2)) ?? "").Trim(),
+                    Codasig         = reader.IsDBNull(3) ? "0" : (Convert.ToString(reader.GetValue(3)) ?? "").Trim(),
+                    FechaIniUnix    = reader.IsDBNull(4) ? null : (Convert.ToString(reader.GetValue(4)) ?? "").Trim(),
                     LastGPSTimestamp = reader.IsDBNull(5) ? 0 : Convert.ToInt64(reader.GetValue(5))
                 });
             }
